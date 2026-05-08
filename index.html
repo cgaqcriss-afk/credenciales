@@ -74,7 +74,7 @@ a.button{
 
 <div class="card">
 
-<img src="https://i.imgur.com/yourphoto.jpg">
+<img id="foto">
 
 <h1 id="nombre"></h1>
 <h2 id="cargo"></h2>
@@ -107,7 +107,8 @@ cargo:"Contador",
 ci:"9165289",
 telefono:"71563826",
 facebook:"https://facebook.com/gaston",
-tiktok:"https://tiktok.com/@gaston"
+tiktok:"https://tiktok.com/@gaston",
+foto:"logo.jpg"
 },
 
 2:{
@@ -116,7 +117,8 @@ cargo:"Administración",
 ci:"1234567",
 telefono:"70000000",
 facebook:"https://facebook.com/maria",
-tiktok:"https://tiktok.com/@maria"
+tiktok:"https://tiktok.com/@maria",
+foto:"logo.jpg"
 }
 
 };
@@ -132,6 +134,7 @@ document.getElementById("nombre").innerText = persona.nombre;
 document.getElementById("cargo").innerText = persona.cargo;
 document.getElementById("ci").innerText = persona.ci;
 document.getElementById("telefono").innerText = persona.telefono;
+document.getElementById("foto").src = persona.foto;
 
 document.getElementById("whatsapp").href =
 https://wa.me/591${persona.telefono};
