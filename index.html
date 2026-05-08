@@ -74,7 +74,7 @@ a.button{
 
 <div class="card">
 
-<img id="foto">
+<img src="logo.jpg">
 
 <h1 id="nombre"></h1>
 <h2 id="cargo"></h2>
@@ -108,7 +108,6 @@ const personas = {
     telefono: "71563826",
     facebook: "https://facebook.com",
     tiktok: "https://tiktok.com",
-    foto: "gaston.jpg"
 },
 
 "2": {
@@ -118,7 +117,6 @@ const personas = {
     telefono: "70000000",
     facebook: "https://facebook.com",
     tiktok: "https://tiktok.com",
-    foto: "maria.jpg"
 }
 
 };
@@ -139,7 +137,6 @@ if(persona){
 
     document.getElementById("telefono").textContent = persona.telefono;
 
-    document.getElementById("foto").src = persona.foto;
 
     document.getElementById("whatsapp").href =
     "https://wa.me/591" + persona.telefono;
