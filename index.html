@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credencial</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+.card{
+    max-width:350px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+h1{
+    margin:5px 0;
+    font-size:24px;
+}
+
+h2{
+    margin:5px 0 20px;
+    color:gray;
+    font-size:18px;
+}
+
+p{
+    margin:10px 0;
+}
+
+a.button{
+    display:block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="https://i.imgur.com/yourphoto.jpg">
+
+<h1 id="nombre"></h1>
+<h2 id="cargo"></h2>
+
+<p><strong>C.I.:</strong> <span id="ci"></span></p>
+<p><strong>Contacto:</strong> <span id="telefono"></span></p>
+<p><strong>Empresa:</strong> PHARMA SERVICE REPRESENTANTES</p>
+
+<a class="button" id="whatsapp" target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+<script>
+
+const personas = {
+
+1:{
+nombre:"Gaston Casas",
+cargo:"Contador",
+ci:"9165289",
+telefono:"71563826"
+},
+
+2:{
+nombre:"Maria Lopez",
+cargo:"Administración",
+ci:"1234567",
+telefono:"70000000"
+}
+
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const persona = personas[id];
+
+if(persona){
+
+document.getElementById("nombre").innerText = persona.nombre;
+document.getElementById("cargo").innerText = persona.cargo;
+document.getElementById("ci").innerText = persona.ci;
+document.getElementById("telefono").innerText = persona.telefono;
+
+document.getElementById("whatsapp").href =
+https://wa.me/591${persona.telefono};
+
+}
+
+</script>
+
+</body>
+</html>
