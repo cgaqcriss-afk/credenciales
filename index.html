@@ -128,7 +128,7 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 const persona = personas[id];
-
+alert(id);
 if(persona){
 
 document.getElementById("nombre").innerText = persona.nombre;
